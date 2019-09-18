@@ -1,6 +1,6 @@
 # create-umi
 
-Creates a UmiJS application/plugin/block/library using the command line.
+Creates a kry UmiJS application/plugin/block/library using the command line.
 
 [![NPM version](https://img.shields.io/npm/v/create-umi.svg?style=flat)](https://npmjs.org/package/create-umi)
 [![Build Status](https://img.shields.io/travis/umijs/create-umi.svg?style=flat)](https://travis-ci.org/umijs/create-umi)
@@ -9,12 +9,13 @@ Creates a UmiJS application/plugin/block/library using the command line.
 ## Usage
 
 ```bash
-$ yarn create umi [appName]
+$ yarn create kryumi [appName]
 ```
 
 ## Boilerplates
 
 * `ant-design-pro` - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.
+* `kry-pro` - Create kry project with a layout-only ant-design-pro boilerplate, use together with kryumi block.
 * `app ` - Create project with a simple boilerplate, support typescript.
 * `block ` - Create a umi block.
 * `library ` - Create a library with umi.
@@ -23,10 +24,11 @@ $ yarn create umi [appName]
 ## Usage Example
 
 ```bash
-$ yarn create umi
+$ yarn create kryumi
 
 ? Select the boilerplate type (Use arrow keys)
   ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.
+  kry-pro         - Create kry project with a layout-only ant-design-pro boilerplate, use together with kryumi block.
 ❯ app             - Create project with a simple boilerplate, support typescript.
   block           - Create a umi block.
   library         - Create a library with umi.
@@ -63,7 +65,7 @@ $ yarn create umi
 
 ## FAQ
 
-### `yarn create umi` command failed
+### `yarn create kryumi` command failed
 
 这个问题基本上都是因为没有添加 yarn global module 的路径到 PATH 环境变量引起的。
 
@@ -77,19 +79,19 @@ $ yarn global bin
 你也可以尝试用 npm，
 
 ```bash
-$ npm create umi
+$ npm create kryumi
 ```
 
-或者手动安装 create-umi，并执行他，
+或者手动安装 create-kryumi，并执行他，
 
 ```bash
-$ npm install create-umi -g
-$ create-umi
+$ npm install create-kryumi -g
+$ create-kryumi
 ```
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/umijs/umi/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc).
+Please open an issue [here](https://github.com/cycle263/create-kry-umi/issues).
 
 ## LICENSE
 

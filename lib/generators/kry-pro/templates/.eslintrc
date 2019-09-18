@@ -1,0 +1,10 @@
+{
+  "extends": "eslint-config-umi",
+  "globals": {
+    "window": true,
+    "localStorage": true,
+    "__HOST_API__": true,
+    "__MOCK_API__": true,
+    "__isRelease__": true
+  }
+}

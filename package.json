@@ -1,14 +1,14 @@
 {
-  "name": "create-umi",
-  "version": "0.17.0",
-  "description": "Creates a UmiJS application using the command line.",
-  "homepage": "https://github.com/umijs/create-umi",
+  "name": "create-kry-umi",
+  "version": "0.0.1",
+  "description": "Creates a kry UmiJS application using the command line.",
+  "homepage": "https://github.com/cycle263/create-kry-umi",
   "bugs": {
-    "url": "https://github.com/umijs/create-umi/issues"
+    "url": "https://github.com/cycle263/create-kry-umi/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/umijs/create-umi"
+    "url": "https://github.com/cycle263/create-kry-umi"
   },
   "license": "MIT",
   "files": [
@@ -17,7 +17,7 @@
     "lib"
   ],
   "bin": {
-    "create-umi": "cli.js"
+    "create-kryumi": "cli.js"
   },
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish",

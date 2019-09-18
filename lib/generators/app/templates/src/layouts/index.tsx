@@ -1,4 +1,4 @@
-import React from 'react';
+indeimport React from 'react';
 import styles from './index.css';
 
 const BasicLayout: React.FC = props => {

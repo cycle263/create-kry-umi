@@ -1,0 +1,23 @@
+defaultSeverity: error
+extends:
+  - tslint-react
+  - tslint-eslint-rules
+jsRules:
+  max-line-length:
+    options: [120]
+rules:
+  eofline: true
+  no-console:
+    options: ["log", "info"]
+  no-construct: true
+  no-debugger: true
+  no-reference: true
+  no-duplicate-variable: true
+  no-trailing-whitespace: false
+  jsx-no-multiline-js: false
+  jsx-alignment: false
+  jsx-no-lambda: false
+globals:
+  __isRelease__: true
+  __HOST_API__: true
+  __HOST_CDN__: true
