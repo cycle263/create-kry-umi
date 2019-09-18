@@ -2,9 +2,9 @@
 
 Creates a kry UmiJS application/plugin/block/library using the command line.
 
-[![NPM version](https://img.shields.io/npm/v/create-umi.svg?style=flat)](https://npmjs.org/package/create-umi)
-[![Build Status](https://img.shields.io/travis/umijs/create-umi.svg?style=flat)](https://travis-ci.org/umijs/create-umi)
-[![NPM downloads](http://img.shields.io/npm/dm/create-umi.svg?style=flat)](https://npmjs.org/package/create-umi)
+[![NPM version](https://img.shields.io/npm/v/create-umi.svg?style=flat)](https://npmjs.org/package/create-kry-umi)
+[![Build Status](https://img.shields.io/travis/umijs/create-umi.svg?style=flat)](https://travis-ci.org/umijs/create-kry-umi)
+[![NPM downloads](http://img.shields.io/npm/dm/create-umi.svg?style=flat)](https://npmjs.org/package/create-kry-umi)
 
 ## Install
 
