@@ -72,7 +72,7 @@ $ yarn create kry-umi
 
 ## FAQ
 
-### `yarn create kryumi` command failed
+### `yarn create kry-umi` command failed
 
 这个问题基本上都是因为没有添加 yarn global module 的路径到 PATH 环境变量引起的。
 
@@ -86,14 +86,14 @@ $ yarn global bin
 你也可以尝试用 npm，
 
 ```bash
-$ npm create kryumi
+$ npm create kry-umi
 ```
 
 或者手动安装 create-kryumi，并执行他，
 
 ```bash
-$ npm install create-kryumi -g
-$ create-kryumi
+$ npm install create-kry-umi -g
+$ create-kry-umi
 ```
 
 ## Questions & Suggestions
