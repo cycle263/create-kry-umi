@@ -1,6 +1,6 @@
 {
   "name": "create-kry-umi",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Creates a kry UmiJS application using the command line.",
   "homepage": "https://github.com/cycle263/create-kry-umi",
   "bugs": {
