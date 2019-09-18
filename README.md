@@ -1,4 +1,4 @@
-# create-umi
+# create-kry-umi
 
 Creates a kry UmiJS application/plugin/block/library using the command line.
 
@@ -6,10 +6,17 @@ Creates a kry UmiJS application/plugin/block/library using the command line.
 [![Build Status](https://img.shields.io/travis/umijs/create-umi.svg?style=flat)](https://travis-ci.org/umijs/create-umi)
 [![NPM downloads](http://img.shields.io/npm/dm/create-umi.svg?style=flat)](https://npmjs.org/package/create-umi)
 
+## Install
+
+```bash
+$ yarn global add create-kry-umi
+```
+
 ## Usage
 
 ```bash
-$ yarn create kryumi [appName]
+$ yarn create kry-umi [appName]
+or create-kry-umi [appName]
 ```
 
 ## Boilerplates
@@ -24,7 +31,7 @@ $ yarn create kryumi [appName]
 ## Usage Example
 
 ```bash
-$ yarn create kryumi
+$ yarn create kry-umi
 
 ? Select the boilerplate type (Use arrow keys)
   ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.
