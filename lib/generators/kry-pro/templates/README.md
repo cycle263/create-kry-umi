@@ -1,10 +1,12 @@
-## create-kry-umi
+## kry-umi
 
 基于最新的umi@2.9版本，支持一键开启 dll ，推荐使用TypeScript。开箱即用的插件，无需安装额外依赖，比如 dva、dva-loading、dva-immer、path-to-regexp、object-assign、react、react-dom 等，其中 dva-immer 需通过配置开启。
 
 **生成工程后需要配置如下文件**
 
 - multiple-bundle-config文件，对应多环境bundle
+
+- scripts/build.pro配置，对应Jenkins打包基本信息，`yarn create kry-umi [appName]`执行此命令有输入appName，则只需修改DEP
 
 - src/global 和 .sentryclirc 文件的钟sentry地址，用于监控前端异常
 

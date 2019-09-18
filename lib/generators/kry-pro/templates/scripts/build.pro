@@ -1,6 +1,6 @@
 DEP=On-Supply
-WAR=scm-ui-delivery.war
-SERNAME=scm-ui-delivery
+WAR=<%= name %>.war
+SERNAME=<%= name %>
 STIME=10
 VERSION=sprint-1916
-GLDPRO=scm-ui-delivery
+GLDPRO=<%= name %>

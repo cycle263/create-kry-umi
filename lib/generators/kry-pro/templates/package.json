@@ -5,13 +5,13 @@
     "start": "better-npm-run start",
     "build": "better-npm-run release",
     "release": "better-npm-run release",
-  <% if (!isTypeScript) { -%>
+<% if (!isTypeScript) { -%>
     "lint": "eslint --ext .js src mock tests",
-  <% } -%>
-  <% if (isTypeScript) { -%>
+<% } -%>
+<% if (isTypeScript) { -%>
     "lint:es": "eslint --ext .js src mock tests",
     "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
-  <% } -%>
+<% } -%>
     "precommit": "lint-staged"
   },
   "betterScripts": {
@@ -33,12 +33,12 @@
   },
   "dependencies": {
     "@sentry/browser": "^5.6.3",
-  <% if (reactFeatures.includes('antd')) { -%>
+<% if (reactFeatures.includes('antd')) { -%>
     "antd": "^3.19.5",
-  <% } -%>
-  <% if (reactFeatures.includes('dva')) { -%>
+<% } -%>
+<% if (reactFeatures.includes('dva')) { -%>
     "dva": "^2.6.0-beta.6",
-  <% } -%>
+<% } -%>
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-intl": "^3.2.1",
@@ -46,12 +46,12 @@
   },
   "devDependencies": {
     "@sentry/webpack-plugin": "^1.8.1",
-  <% if (isTypeScript) { -%>
+<% if (isTypeScript) { -%>
     "@types/jest": "^23.3.12",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "@types/react-test-renderer": "^16.0.3",
-  <% } -%>
+<% } -%>
     "babel-eslint": "^9.0.0",
     "better-npm-run": "^0.1.1",
     "eslint": "^5.4.0",
@@ -63,17 +63,17 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
     "react-test-renderer": "^16.7.0",
-  <% if (isTypeScript) { -%>
+<% if (isTypeScript) { -%>
     "tslint": "^5.12.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^3.6.0",
     "umi": "^2.9.0",
     "umi-plugin-react": "^1.8.0",
-    "umi-types": "^0.3.0"
-  <% } else { -%>
+    "umi-types": "^0.3.0",
+<% } else { -%>
     "umi": "^2.7.7",
-    "umi-plugin-react": "^1.8.4"
-  <% } -%>
+    "umi-plugin-react": "^1.8.4",
+<% } -%>
     "webpack-plugin-create-multiple-bundle-from-string-replace": "^0.2.7"
   },
   "lint-staged": {
