@@ -18,6 +18,6 @@ rules:
   jsx-alignment: false
   jsx-no-lambda: false
 globals:
-  __isRelease__: true
+  __IS_RELEASE__: true
   __HOST_API__: true
   __HOST_CDN__: true

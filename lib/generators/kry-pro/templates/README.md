@@ -6,7 +6,7 @@
 
 - multiple-bundle-config文件，对应多环境bundle
 
-- scripts/build.pro配置，对应Jenkins打包基本信息，`yarn create kry-umi [appName]`执行此命令有输入appName，则只需修改DEP
+- scripts/build.pro配置，对应Jenkins打包基本信息，`yarn create kry-umi [appName]`执行此命令有输入appName，则只需修改DEP。不输入appname，则默认取当前目录名称。
 
 - src/global 和 .sentryclirc 文件的钟sentry地址，用于监控前端异常
 
@@ -23,6 +23,7 @@
     ├── layouts/index.js           // 全局布局，在所有路由外面嵌套一层路由
     ├── modals/                    // 全局 model
     ├── services/                  // 存放全局通用请求
+    ├── components/                // 公用组件
     ├── utils/                     // 全局工具类方法
     ├── e2e/                       // 单元测试脚本文件
     ├── assets/                    // 存放静态资源，例如图片文件、字体文件等

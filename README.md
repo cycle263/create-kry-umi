@@ -19,6 +19,8 @@ $ yarn create kry-umi [appName]
 or create-kry-umi [appName]
 ```
 
+不输入appname，则默认取当前目录名称。
+
 ## Boilerplates
 
 * `ant-design-pro` - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.

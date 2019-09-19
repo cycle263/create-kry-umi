@@ -5,6 +5,6 @@
     "localStorage": true,
     "__HOST_API__": true,
     "__MOCK_API__": true,
-    "__isRelease__": true
+    "__IS_RELEASE__": true
   }
 }

@@ -41,9 +41,6 @@ const GlobalModel: GlobalModelType = {
         payload: data,
       });
     },
-    *throwError() {
-      throw new Error('hi error');
-    },
   },
 };
 

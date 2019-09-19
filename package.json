@@ -27,7 +27,7 @@
   "dependencies": {
     "chalk": "^2.4.2",
     "clipboardy": "^2.1.0",
-    "create-kry-umi": "^0.0.7",
+    "create-kry-umi": "^0.0.10",
     "debug": "^4.1.1",
     "execa": "^1.0.0",
     "fs-extra": "^8.0.1",

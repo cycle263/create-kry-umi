@@ -5,11 +5,12 @@
     "start": "better-npm-run start",
     "build": "better-npm-run release",
     "release": "better-npm-run release",
+    "release:debug": "better-npm-run release:debug",
 <% if (!isTypeScript) { -%>
-    "lint": "eslint --ext .js src mock tests",
+    "lint": "eslint --ext .js src mock",
 <% } -%>
 <% if (isTypeScript) { -%>
-    "lint:es": "eslint --ext .js src mock tests",
+    "lint:es": "eslint --ext .js src mock",
     "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
 <% } -%>
     "precommit": "lint-staged"
@@ -29,7 +30,25 @@
         "HOST_API": "HOST_API",
         "HOST_CDN": "HOST_CDN"
       }
-    }
+    },
+    "release:debug": {
+      "command": "umi build",
+      "env": {
+        "CI": true,
+        "COMPRESS": "none",
+        "DEBUG": "umi*",
+        "HOST_API": "HOST_API",
+        "HOST_SCM_API": "HOST_CDN"
+      }
+    },
+    "release:noSentry": {
+      "command": "umi build",
+      "env": {
+        "isRelease": false,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
   },
   "dependencies": {
     "@sentry/browser": "^5.6.3",
