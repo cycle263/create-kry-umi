@@ -8,7 +8,7 @@
 
 - scripts/build.pro配置，对应Jenkins打包基本信息，`yarn create kry-umi [appName]`执行此命令有输入appName，则只需修改DEP。不输入appname，则默认取当前目录名称。
 
-- src/global 和 .sentryclirc 文件的钟sentry地址，用于监控前端异常
+- src/global 和 .sentryclirc 文件的钟sentry地址，用于监控前端异常，未修改build会有异常。不需要sentry监控，可以手动注释 src/global 的初始化代码和 .umirc 的sentryPlugin。
 
 * 约定的目录结构
 

@@ -24,7 +24,7 @@
       }
     },
     "release": {
-      "command": "umi build",
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
       "env": {
         "isRelease": true,
         "HOST_API": "HOST_API",
@@ -32,8 +32,9 @@
       }
     },
     "release:debug": {
-      "command": "umi build",
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
       "env": {
+        "isRelease": true,
         "CI": true,
         "COMPRESS": "none",
         "DEBUG": "umi*",
@@ -42,9 +43,9 @@
       }
     },
     "release:noSentry": {
-      "command": "umi build",
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
       "env": {
-        "isRelease": false,
+        "isRelease": true,
         "HOST_API": "HOST_API",
         "HOST_CDN": "HOST_CDN"
       }
