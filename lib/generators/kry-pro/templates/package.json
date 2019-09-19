@@ -48,7 +48,7 @@
         "HOST_API": "HOST_API",
         "HOST_CDN": "HOST_CDN"
       }
-    },
+    }
   },
   "dependencies": {
     "@sentry/browser": "^5.6.3",
