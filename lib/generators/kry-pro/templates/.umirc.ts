@@ -3,6 +3,7 @@ const path = require('path');
 const MultipleBundlePlugin = require('webpack-plugin-create-multiple-bundle-from-string-replace');
 const SentryPlugin = require('@sentry/webpack-plugin');
 const version = require('./package.json').version;
+const cwd = process.cwd();
 
 // ref: https://umijs.org/config/
 const config: IConfig = {
@@ -57,6 +58,11 @@ const config: IConfig = {
             distPath: `${path.resolve(__dirname, './dist')}/multiple-bundle-from-string-replace`,
           },
         ));
+
+      // 别名
+      config.resolve.alias.set("components", path.resolve(cwd, "src/components"));
+      //
+      config.output.set("publicPath", process.env.HOST_CDN);
     }
   }
 }
