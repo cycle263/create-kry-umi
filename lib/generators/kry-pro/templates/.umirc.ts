@@ -59,9 +59,6 @@ const config: IConfig = {
           },
         ));
 
-      // 别名
-      config.resolve.alias.set("components", path.resolve(cwd, "src/components"));
-      //
       config.output.set("publicPath", process.env.HOST_CDN);
     }
   }

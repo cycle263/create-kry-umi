@@ -1,16 +1,24 @@
 ## kry-umi
 
-基于最新的umi@2.9版本，支持一键开启 dll ，推荐使用TypeScript。开箱即用的插件，无需安装额外依赖，比如 dva、dva-loading、dva-immer、path-to-regexp、object-assign、react、react-dom 等，其中 dva-immer 需通过配置开启。
+基于最新的 umi@2.9 版本，支持一键开启 dll ，推荐使用 TypeScript。开箱即用的插件，无需安装额外依赖，比如 dva、dva-loading、dva-immer、path-to-regexp、object-assign、react、react-dom 等，其中 dva-immer 需通过配置开启。
 
 **生成工程后需要配置如下文件**
 
-- multiple-bundle-config文件，对应多环境bundle
+- multiple-bundle-config 文件，对应多环境 bundle
 
-- scripts/build.pro配置，对应Jenkins打包基本信息，`yarn create kry-umi [appName]`执行此命令有输入appName，则只需修改DEP。不输入appname，则默认取当前目录名称。
+- scripts/build.pro 配置，对应 Jenkins 打包基本信息，`yarn create kry-umi [appName]`执行此命令有输入 appName，则只需修改 DEP。不输入 appname，则默认取当前目录名称。
 
-- src/global 和 .sentryclirc 文件的钟sentry地址，用于监控前端异常，未修改build会有异常。不需要sentry监控，可以手动注释 src/global 的初始化代码和 .umirc 的sentryPlugin。
+- src/global 和 .sentryclirc 文件的钟 sentry 地址，用于监控前端异常，未修改 build 会有异常。不需要 sentry 监控，可以手动注释 src/global 的初始化代码和 .umirc 的 sentryPlugin。
 
-* 约定的目录结构
+- install
+
+```js
+yarn install // install
+yarn start   // 本地服务
+yarn lint:es // 检测代码规范
+```
+
+- 约定的目录结构
 
 ```js
 .
@@ -43,11 +51,11 @@
 └── package.json
 ```
 
-* 约定的路由
+- 约定的路由
 
 umi 会根据 pages 目录自动生成路由配置。
 
-* modal
+- modal
 
 model 分两类，一是全局 model，二是页面 model。全局 model 存于 /src/models/ 目录，所有页面都可引用；页面 model 不能被其他页面所引用。
 
@@ -72,7 +80,7 @@ export default {
 }
 ```
 
-* Effect
+- Effect
 
   - select 用于获取当前或其他 model 的 state 。
 
@@ -80,7 +88,7 @@ export default {
 
   - put 用于触发一个 action，既可以是一个 reducer, 也可以是一个 effect。
 
-* connect
+- connect
 
   推荐使用装饰器语法
 
@@ -95,7 +103,7 @@ export default {
   class Demo extend Component
   ```
 
-* import
+- import
 
   推荐使用@
 

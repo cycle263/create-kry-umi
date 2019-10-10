@@ -98,7 +98,7 @@
   },
   "lint-staged": {
   <% if (isTypeScript) { -%>
-    "*.{ts,tsx}": ["tslint --fix", "git add"],
+    "*.{ts,tsx}": ["eslint --fix", "git add"],
   <% } -%>
     "*.{js,jsx}": [
       "eslint --fix",
