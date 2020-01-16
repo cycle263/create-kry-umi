@@ -4,9 +4,9 @@
 
 **生成工程后需要配置如下文件**
 
-- multiple-bundle-config 文件，对应多环境 bundle  (create-kry-umi@1.0.7版本已经去除)
+- multiple-bundle-config 文件，对应多环境 bundle  (create-kry-umi@1.1.0之后版本已经去除)
 
-- 指定build发版机制（create-kry-umi@1.0.7版本更新）
+- 指定build发版机制（create-kry-umi@1.1.0之后版本更新）
 
 - scripts/build.pro 配置，对应 Jenkins 打包基本信息，`yarn create kry-umi [appName]`执行此命令有输入 appName，则只需修改 DEP。不输入 appname，则默认取当前目录名称。
 
@@ -115,3 +115,7 @@ export default {
     "@/*": ["src/*"]
   },
   ```
+
+### 常见异常
+
+* run release有未知错误信息，请检查sentry的配置文件，或者 .umirc里直接注释sentry插件 （将不会使用监控系统sentry）
