@@ -5,6 +5,14 @@
     "start": "better-npm-run start",
     "build": "better-npm-run release",
     "release": "better-npm-run release",
+    "release:dev": "better-npm-run release:dev",
+    "release:citest": "better-npm-run release:citest",
+    "release:gld": "better-npm-run release:gld",
+    "release:gldexp": "better-npm-run release:gldexp",
+    "release:vpcprod": "better-npm-run release:vpcprod",
+    "release:vpcprodexp": "better-npm-run release:vpcprodexp",
+    "release:sgprod": "better-npm-run release:sgprod",
+    "release:sentry": "better-npm-run release:sentry",
     "release:debug": "better-npm-run release:debug",
 <% if (!isTypeScript) { -%>
     "lint": "eslint --ext .js src mock",
@@ -23,7 +31,55 @@
         "HOST_CDN": "/"
       }
     },
-    "release": {
+    "release:dev": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:citest": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:gldexp": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:gld": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:vpcprodexp": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:vpcprod": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:sgprod": {
       "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
       "env": {
         "isRelease": true,

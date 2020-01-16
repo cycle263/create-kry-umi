@@ -52,7 +52,7 @@ const config: IConfig = {
       config
         .plugin('MultipleBundle')
         .use(new MultipleBundlePlugin(
-          require(path.resolve(__dirname, './multiple-bundle-config.js')),
+          require(path.resolve(__dirname, './multiple-bundle-config.ts')),
           {
             sourcePath: path.resolve(__dirname, './dist'),
             distPath: `${path.resolve(__dirname, './dist')}/multiple-bundle-from-string-replace`,
