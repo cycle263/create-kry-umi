@@ -98,6 +98,12 @@ $ npm install create-kry-umi -g
 $ create-kry-umi
 ```
 
+## version update
+
+@1.0.5 多包发布机制
+
+@1.0.6 去除多包机制，更新新发版机制
+
 ## Questions & Suggestions
 
 Please open an issue [here](https://github.com/cycle263/create-kry-umi/issues).
