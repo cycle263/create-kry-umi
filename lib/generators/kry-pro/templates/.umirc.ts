@@ -1,9 +1,9 @@
 import { IConfig } from 'umi-types';
-const path = require('path');
-const MultipleBundlePlugin = require('webpack-plugin-create-multiple-bundle-from-string-replace');
+// const path = require('path');
+// const MultipleBundlePlugin = require('webpack-plugin-create-multiple-bundle-from-string-replace');
 const SentryPlugin = require('@sentry/webpack-plugin');
 const version = require('./package.json').version;
-const cwd = process.cwd();
+// const cwd = process.cwd();
 
 // ref: https://umijs.org/config/
 const config: IConfig = {

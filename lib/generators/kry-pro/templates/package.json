@@ -139,18 +139,16 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
     "react-test-renderer": "^16.7.0",
+    "umi": "^2.9.0",
 <% if (isTypeScript) { -%>
     "tslint": "^5.12.0",
     "tslint-eslint-rules": "^5.4.0",
     "tslint-react": "^3.6.0",
-    "umi": "^2.9.0",
     "umi-plugin-react": "^1.8.0",
-    "umi-types": "^0.3.0",
+    "umi-types": "^0.3.0"
 <% } else { -%>
-    "umi": "^2.7.7",
-    "umi-plugin-react": "^1.8.4",
+    "umi-plugin-react": "^1.8.4"
 <% } -%>
-    "webpack-plugin-create-multiple-bundle-from-string-replace": "^0.2.7"
   },
   "lint-staged": {
   <% if (isTypeScript) { -%>
