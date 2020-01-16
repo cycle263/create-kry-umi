@@ -4,7 +4,9 @@
 
 **生成工程后需要配置如下文件**
 
-- multiple-bundle-config 文件，对应多环境 bundle
+- multiple-bundle-config 文件，对应多环境 bundle  (create-kry-umi@1.0.7版本已经去除)
+
+- 指定build发版机制（create-kry-umi@1.0.7版本更新）
 
 - scripts/build.pro 配置，对应 Jenkins 打包基本信息，`yarn create kry-umi [appName]`执行此命令有输入 appName，则只需修改 DEP。不输入 appname，则默认取当前目录名称。
 
