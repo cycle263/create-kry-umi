@@ -116,7 +116,7 @@
       }
     },
     "release:debug": {
-      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f && standard-version",
       "env": {
         "isRelease": true,
         "CI": true,

@@ -122,4 +122,4 @@ export default {
 
 * 修改.sentryclirc的url
 
-* standard-version异常，关联remote Repository
+* release:debug更新changelog。如果standard-version异常，请关联remote Repository
