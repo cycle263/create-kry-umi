@@ -2,19 +2,29 @@ import { IConfig } from 'umi-types';
 // const path = require('path');
 // const MultipleBundlePlugin = require('webpack-plugin-create-multiple-bundle-from-string-replace');
 const SentryPlugin = require('@sentry/webpack-plugin');
-const version = require('./package.json').version;
+
+// 获取git版本号
+// tslint:disable-next-line: no-var-requires
+export const __SENTRY_VERSION__ = require("./package.json").version;
+
 // const cwd = process.cwd();
 
 // ref: https://umijs.org/config/
 const config: IConfig = {
+  //样式变量列表：https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+  theme: {
+    "font-size-base": "13px",
+  },
   treeShaking: true,
   history: 'hash',
+  disableCSSModules: true,
+  hash: true,
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
       antd: <% if (reactFeatures.includes('antd')) { %>true<% } else { %>false<% } %>,
       dva: <% if (reactFeatures.includes('dva')) { %>true<% } else { %>false<% } %>,
-      dynamicImport: <% if (reactFeatures.includes('dynamicImport')) { %>{ webpackChunkName: true }<% } else { %>false<% } %>,
+      dynamicImport: <% if (reactFeatures.includes('dynamicImport')) { %>{ webpackChunkName: true, level: 1 }<% } else { %>false<% } %>,
       title: '<%= name %>',
       dll: <% if (reactFeatures.includes('dll')) { %>true<% } else { %>false<% } %>,
       <% if (reactFeatures.includes('locale')) { %>locale: {
@@ -27,22 +37,28 @@ const config: IConfig = {
           /services\//,
           /model\.(t|j)sx?$/,
           /service\.(t|j)sx?$/,<% } %>
+          /constants\.(t|j)sx?$/,
           /components\//,
         ],
       },
     }]
   ],
+  devtool: !!process.env.isRelease ? "source-map" : "",
   define: {
-    '__HOST_CDN__': JSON.stringify(process.env.HOST_CDN),
-    '__HOST_API__': JSON.stringify(process.env.HOST_API),
-    '__IS_RELEASE__': JSON.stringify(!!process.env.isRelease)
+    __DEV__: process.env.NODE_ENV === "development",
+    __HOST_CDN__: JSON.stringify(process.env.HOST_CDN),
+    __HOST_API__: JSON.stringify(process.env.HOST_API),
+    __MOCK__: !!process.env.MOCK,
+    __IS_DEBUG_SENTRY__: !!process.env.DEBUG_SENTRY,
+    __IS_RELEASE__: JSON.stringify(!!process.env.isRelease),
+    __SENTRY_VERSION__: JSON.stringify(__SENTRY_VERSION__),
   },
   chainWebpack(config) {
     if (!!process.env.isRelease) {
       // sentry 上传sourceMap
       config.plugin('SentryPlugin')
         .use(new SentryPlugin({
-          release: version,
+          release: __SENTRY_VERSION__,
           include: './dist',
           urlPrefix: '/',
           ignore: ['node_modules']

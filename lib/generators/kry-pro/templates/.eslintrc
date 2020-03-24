@@ -1,10 +1,17 @@
 {
   "extends": "eslint-config-umi",
+  "rules": {
+    "no-angle-bracket-type-assertion": false
+  },
   "globals": {
     "window": true,
     "localStorage": true,
     "__HOST_API__": true,
     "__MOCK_API__": true,
-    "__IS_RELEASE__": true
+    "__IS_RELEASE__": true,
+    "__MOCK__": true,
+    "__isRelease__": true,
+    "__SENTRY_VERSION__": true,
+    "__IS_DEBUG_SENTRY__": true
   }
 }

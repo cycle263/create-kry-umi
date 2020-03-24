@@ -1,8 +1,12 @@
 {
   "version": "0.0.1",
+  "sentryEnv": "gld,vpcprodexp,vpcprod",
   "private": true,
   "scripts": {
     "start": "better-npm-run start",
+    "start:citest": "better-npm-run start:citest",
+    "start:gb": "better-npm-run start:gb",
+    "start:sentry": "better-npm-run start-sentry",
     "build": "better-npm-run release",
     "release": "better-npm-run release",
     "release:dev": "better-npm-run release:dev",
@@ -29,6 +33,30 @@
       "env": {
         "HOST_API": "",
         "HOST_CDN": "/"
+      }
+    },
+    "start:citest": {
+      "command": "umi dev",
+      "env": {
+        "HOST_API": "",
+        "HOST_CDN": "/",
+        "HTTPS": true
+      }
+    },
+    "start:gb": {
+      "command": "umi dev",
+      "env": {
+        "HOST_API": "",
+        "HOST_CDN": "/",
+        "HTTPS": true
+      }
+    },
+    "start-sentry": {
+      "command": "umi dev",
+      "env": {
+        "HOST_API": "",
+        "HOST_CDN": "/",
+        "DEBUG_SENTRY": true
       }
     },
     "release:dev": {
