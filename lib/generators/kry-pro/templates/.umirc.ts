@@ -56,13 +56,13 @@ const config: IConfig = {
   chainWebpack(config) {
     if (!!process.env.isRelease) {
       // sentry 上传sourceMap
-      config.plugin('SentryPlugin')
-        .use(new SentryPlugin({
-          release: __SENTRY_VERSION__,
-          include: './dist',
-          urlPrefix: '/',
-          ignore: ['node_modules']
-        }))
+      // config.plugin('SentryPlugin')
+      //   .use(new SentryPlugin({
+      //     release: __SENTRY_VERSION__,
+      //     include: './dist',
+      //     urlPrefix: '/',
+      //     ignore: ['node_modules']
+      //   }))
 
       // 多环境拷贝
       // config

@@ -100,6 +100,8 @@ $ create-kry-umi
 
 ## version update
 
+@1.1.3 add standard-version
+
 @1.1.0 优化升级
 
 @1.0.5 多包发布机制

@@ -121,3 +121,5 @@ export default {
 * run release有未知错误信息，请检查sentry的配置文件，或者 .umirc里直接注释sentry插件 （将不会使用监控系统sentry）
 
 * 修改.sentryclirc的url
+
+* standard-version异常，关联remote Repository
