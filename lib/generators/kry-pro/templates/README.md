@@ -20,6 +20,10 @@ yarn start   // 本地服务
 yarn lint:es // 检测代码规范
 ```
 
+- 技巧
+
+  * https 启动 devserver，package.json里修改 env 中的 HTTPS 为true；http启动则需删除此配置。
+
 - 约定的目录结构
 
 ```js
@@ -27,6 +31,7 @@ yarn lint:es // 检测代码规范
 ├── dist/                          // 默认的 build 输出目录
 ├── mock/                          // mock 文件所在目录，基于express，可在.env文件中关闭：MOCK=none
 ├── tests/                         // 测试脚本文件
+├── pontAPI/                       // pont生成的元数据文件
 ├── config/
     ├── config.js                  // umi 配置，同 .umirc.js，二选一
 └── src/                           // 源码目录，可选
@@ -51,6 +56,8 @@ yarn lint:es // 检测代码规范
 ├── .umirc.js                      // umi 配置，同 config/config.js，二选一
 ├── .env                           // 环境变量
 └── package.json
+└── pont-config.json               // pont配置文件
+└── template.ts                    // pont接口代码模板
 ```
 
 - 约定的路由
@@ -115,6 +122,54 @@ export default {
     "@/*": ["src/*"]
   },
   ```
+
+- lint
+
+  vscode 配置 lint，安装 `Prettier - Code formatter` 插件，配置 tslint.formatOnSave 为 true，保存自动格式化。
+
+  [lint 规则详情参见](https://github.com/AlloyTeam/tslint-config-alloy)
+
+  ### 常见代码规范
+
+  - 编辑、新增、查看统一使用路由 detial，使用 query 字符串 type 来区分，包括：add、edit、view、copy 等
+
+  - less 全局变量写在 src/layouts/constants.less 里，以便统一样式，包括色号，字号，字体等
+
+  - conventional-changelog生成changelog
+
+  - 接入cnzz埋点
+
+  - api建议使用pont工具，生成接口代码和文档、mock数据等，pont mock端口号默认8008
+
+    **接入步骤**：
+
+    1、安装vscode的插件pont；
+
+    2、安装依赖包pont-engine；
+
+    3、修改pont-config配置，或者pont start命令修改配置；
+
+    4、使用vscode状态栏的generate指令生成pont元数据，对应pontAPI目录。
+
+    **使用步骤**：
+
+    ```js
+    // services
+
+    export async function queryLineList(params: any) {
+      return API.multiDeliveryLine.query.request(params, {});
+    };
+    ```
+
+    **使用技巧**
+
+    * cmd + ctrl + p 进行接口查找
+
+    * 右键 pont 接口代码，可以跳转(jump to mock position)去编辑接口的 mocks 数据
+
+    * 右键 pont 接口代码，可以访问(visit mocks interface) GET 类型的 mocks 接口
+
+    * [详情参见](https://github.com/alibaba/pont)
 
 ### 常见异常
 

@@ -19,6 +19,14 @@ const config: IConfig = {
   history: 'hash',
   disableCSSModules: true,
   hash: true,
+  <% if (reactFeatures.includes('pont')) { -%>
+  proxy: {
+    "/pontApi": {
+      "target": "http://localhost:8008/",
+      "changeOrigin": true
+    }
+  },
+  <% } -%>
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {

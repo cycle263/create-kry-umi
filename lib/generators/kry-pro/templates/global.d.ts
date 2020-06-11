@@ -3,3 +3,5 @@ declare const __HOST_API__: string;
 declare const __MOCK__: boolean;
 declare const __DEV__: boolean;
 declare const __IS_DEBUG_SENTRY__: boolean;
+declare const _czc:object;
+declare module 'js-cookie';

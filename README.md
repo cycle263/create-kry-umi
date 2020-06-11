@@ -100,6 +100,8 @@ $ create-kry-umi
 
 ## version update
 
+@1.1.5 add pont、cnzz
+
 @1.1.3 add standard-version
 
 @1.1.0 优化升级

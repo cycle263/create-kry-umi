@@ -30,5 +30,8 @@
     "src/setupTests.ts",
     "tslint:latest",
     "tslint-config-prettier"
-  ]
+  ],
+<% if (reactFeatures.includes('pont')) { -%>
+  "includes": ["./pontAPI/api.d.ts"]
+<% } -%>
 }
