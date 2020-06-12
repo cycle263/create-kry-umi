@@ -57,7 +57,7 @@ yarn lint:es // 检测代码规范
 ├── .env                           // 环境变量
 └── package.json
 └── pont-config.json               // pont配置文件
-└── template.ts                    // pont接口代码模板
+└── pontTemplate.ts                // pont接口代码模板
 ```
 
 - 约定的路由

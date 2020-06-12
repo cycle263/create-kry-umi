@@ -12,6 +12,7 @@
     "__MOCK__": true,
     "__isRelease__": true,
     "__SENTRY_VERSION__": true,
-    "__IS_DEBUG_SENTRY__": true
+    "__IS_DEBUG_SENTRY__": true,
+    "__DEV__": true,
   }
 }

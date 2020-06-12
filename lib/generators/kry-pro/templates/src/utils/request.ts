@@ -94,11 +94,9 @@ const request = extend({
 const handleUrl = (url: string, requestSet?: RequestSetType) => {
   if (
     (__DEV__ && __MOCK__) ||
-    (__DEV__ && requestSet && requestSet.mock && isLocal)
+    (__DEV__ && requestSet && requestSet.mock && isLocal) ||
+    url.match(/(http(s)?:)?\/\//)
   ) {
-    return url;
-  } else if (url.match(/(http(s)?:)?\/\//)) {
-    //完整url
     return url;
   } else {
     return `${__HOST_API__}${url.indexOf('/') === 0 ? url.substr(1) : url}`;
