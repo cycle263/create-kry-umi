@@ -1,6 +1,8 @@
 {
   "version": "0.0.1",
   "sentryEnv": "gld,vpcprodexp,vpcprod",
+  "authors": "cycle263",
+  "description": "kryumi for keruyun",
   "private": true,
   "scripts": {
     "start": "better-npm-run start",

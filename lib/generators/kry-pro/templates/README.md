@@ -137,7 +137,7 @@ export default {
 
   - conventional-changelog生成changelog
 
-  - 接入cnzz埋点
+  - 接入cnzz埋点，记住替换document.ejs文件里 cnzz项目key
 
   - api建议使用pont工具，生成接口代码和文档、mock数据等，pont mock端口号默认8008
 
@@ -178,3 +178,8 @@ export default {
 * 修改.sentryclirc的url
 
 * release:debug更新changelog。如果standard-version异常，请关联remote Repository
+
+
+### 代码贡献
+
+[create-kry-umi](https://github.com/cycle263/create-kry-umi)

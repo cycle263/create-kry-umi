@@ -3,10 +3,6 @@ import Link from 'umi/link';
 import styles from './index.css';
 <% if (reactFeatures.includes('locale')) { %>import { formatMessage } from 'umi-plugin-locale';<% } -%>
 
-declare global {
-  const __HOST_API__: boolean;
-};
-
 export default function() {
   return (
     <div className={styles.normal}>

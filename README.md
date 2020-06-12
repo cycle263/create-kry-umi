@@ -50,6 +50,7 @@ $ yarn create kry-umi
  ◯ dva
  ◯ code splitting
  ◯ dll
+ ◯ pont
 
   create abc/package.json
   create abc/.gitignore
