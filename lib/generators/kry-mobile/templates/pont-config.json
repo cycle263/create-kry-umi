@@ -1,0 +1,15 @@
+{
+  "originUrl": "https://petstore.swagger.io/v2/swagger.json",
+  "outDir": "./pontAPI",
+  "templatePath": "./pontTemplate",
+  "mocks": {
+    "enable": true,
+    "port": 8008
+  },
+  "templateType": "fetch",
+<% if (isTypeScript) { -%>
+    "surrounding": "typeScript"
+<% } else { -%>
+    "surrounding": "javaScript"
+<% } -%>
+}

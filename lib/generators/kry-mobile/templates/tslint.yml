@@ -1,0 +1,38 @@
+defaultSeverity: error
+extends:
+  - tslint-react
+  - tslint-eslint-rules
+  - tslint-config-prettier
+linterOptions:
+  exclude:
+    - "**/node_modules/**"
+jsRules:
+  max-line-length:
+    options: [120]
+rules:
+  eofline: true
+  no-console:
+    options: ["log", "info"]
+  no-construct: true
+  no-debugger: true
+  no-reference: true
+  no-duplicate-variable: true
+  no-trailing-whitespace: false
+  jsx-no-multiline-js: false
+  jsx-alignment: false
+  jsx-no-lambda: false
+  no-var-keyword: true
+  no-implicit-dependencies: false
+  ordered-imports: false
+  member-ordering: false
+  no-import-side-effect: [true, { "ignore-pattern": "**/__tests__/**" }]
+  member-access:
+    options: ["no-public"]
+globals:
+  __IS_RELEASE__: true
+  __HOST_API__: true
+  __HOST_CDN__: true
+  __DEV__: true,
+  __MOCK__: true,
+  __SENTRY_VERSION__: true,
+  __IS_DEBUG_SENTRY__: true,

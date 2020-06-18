@@ -1,0 +1,7 @@
+ [defaults]
+url = https://sentry.io/
+org = sentry
+project = <%= name %>
+    
+[auth]
+token = 4279a451e3754fe8bda44da0ac8bbfef072e39bd7a00472f9048e340c503ff20

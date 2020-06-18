@@ -24,7 +24,8 @@ or create-kry-umi [appName]
 ## Boilerplates
 
 * `ant-design-pro` - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.
-* `kry-pro` - Create kry project with a layout-only ant-design-pro boilerplate, use together with kryumi block.
+* `kry-mobile` - Create kry mobile project with a layout-only ant-design-pro boilerplate, use together with kry umi block.
+* `kry-pro` - Create kry project with a layout-only ant-design-pro boilerplate, use together with kry umi block.
 * `app ` - Create project with a simple boilerplate, support typescript.
 * `block ` - Create a umi block.
 * `library ` - Create a library with umi.
@@ -37,7 +38,8 @@ $ yarn create kry-umi
 
 ? Select the boilerplate type (Use arrow keys)
   ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.
-  kry-pro         - Create kry project with a layout-only ant-design-pro boilerplate, use together with kryumi block.
+  kry-mobile      - Create kry mobile project with a layout-only ant-design-pro boilerplate, use together with kry umi block.
+  kry-pro         - Create kry project with a layout-only ant-design-pro boilerplate, use together with kry umi block.
 ❯ app             - Create project with a simple boilerplate, support typescript.
   block           - Create a umi block.
   library         - Create a library with umi.
@@ -101,7 +103,9 @@ $ create-kry-umi
 
 ## version update
 
-@1.1.5 add pont、cnzz
+@1.2.0 add kry-mobile boilerplate
+
+@1.1.8 add pont、cnzz
 
 @1.1.3 add standard-version
 
@@ -109,7 +113,7 @@ $ create-kry-umi
 
 @1.0.5 多包发布机制
 
-@1.1.0 去除多包机制，更新新发版机制
+@1.0.0 去除多包机制，更新新发版机制
 
 ## Questions & Suggestions
 

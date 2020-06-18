@@ -1,0 +1,202 @@
+{
+  "version": "0.0.1",
+  "sentryEnv": "gld,vpcprodexp,vpcprod",
+  "authors": "cycle263",
+  "description": "kryumi for keruyun",
+  "private": true,
+  "scripts": {
+    "start": "better-npm-run start",
+    "start:citest": "better-npm-run start:citest",
+    "start:gb": "better-npm-run start:gb",
+    "start:sentry": "better-npm-run start-sentry",
+    "build": "better-npm-run release",
+    "release": "better-npm-run release",
+    "release:dev": "better-npm-run release:dev",
+    "release:citest": "better-npm-run release:citest",
+    "release:gld": "better-npm-run release:gld",
+    "release:gldexp": "better-npm-run release:gldexp",
+    "release:vpcprod": "better-npm-run release:vpcprod",
+    "release:vpcprodexp": "better-npm-run release:vpcprodexp",
+    "release:sgprod": "better-npm-run release:sgprod",
+    "release:sentry": "better-npm-run release:sentry",
+    "release:debug": "better-npm-run release:debug",
+<% if (!isTypeScript) { -%>
+    "lint": "eslint --ext .js src mock",
+<% } -%>
+<% if (isTypeScript) { -%>
+    "lint:es": "eslint --ext .js src mock",
+    "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
+<% } -%>
+    "precommit": "lint-staged"
+  },
+  "betterScripts": {
+    "start": {
+      "command": "umi dev",
+      "env": {
+        "HOST_API": "",
+        "HOST_CDN": "/"
+      }
+    },
+    "start:citest": {
+      "command": "umi dev",
+      "env": {
+        "HOST_API": "",
+        "HOST_CDN": "/",
+        "HTTPS": true
+      }
+    },
+    "start:gb": {
+      "command": "umi dev",
+      "env": {
+        "HOST_API": "",
+        "HOST_CDN": "/",
+        "HTTPS": true
+      }
+    },
+    "start-sentry": {
+      "command": "umi dev",
+      "env": {
+        "HOST_API": "",
+        "HOST_CDN": "/",
+        "DEBUG_SENTRY": true
+      }
+    },
+    "release:dev": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:citest": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:gldexp": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:gld": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:vpcprodexp": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:vpcprod": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:sgprod": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    },
+    "release:debug": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f && standard-version",
+      "env": {
+        "isRelease": true,
+        "CI": true,
+        "COMPRESS": "none",
+        "DEBUG": "umi*",
+        "HOST_API": "HOST_API",
+        "HOST_SCM_API": "HOST_CDN"
+      }
+    },
+    "release:noSentry": {
+      "command": "umi build && find ./dist -name '*.map' | xargs rm -f",
+      "env": {
+        "isRelease": true,
+        "HOST_API": "HOST_API",
+        "HOST_CDN": "HOST_CDN"
+      }
+    }
+  },
+  "dependencies": {
+    "@sentry/browser": "^5.6.3",
+<% if (reactFeatures.includes('antd-mobile')) { -%>
+    "antd-mobile": "^2.3.3",
+<% } -%>
+<% if (reactFeatures.includes('dva')) { -%>
+    "dva": "^2.6.0-beta.6",
+<% } -%>
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-intl": "^3.2.1",
+    "umi-request": "^1.2.5",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "@sentry/webpack-plugin": "^1.8.1",
+<% if (isTypeScript) { -%>
+    "@types/jest": "^23.3.12",
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-test-renderer": "^16.0.3",
+<% } -%>
+    "babel-eslint": "^9.0.0",
+    "better-npm-run": "^0.1.1",
+    "eslint": "^5.4.0",
+    "eslint-config-umi": "^1.4.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "react-test-renderer": "^16.7.0",
+    "umi": "^2.9.0",
+    "standard-version": "^7.1.0",
+  <% if (reactFeatures.includes('pont')) { -%>
+    "pont-engine": "^1.0.3",
+  <% } -%>
+<% if (isTypeScript) { -%>
+    "tslint": "^5.12.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "umi-plugin-react": "^1.8.0",
+    "umi-types": "^0.3.0"
+<% } else { -%>
+    "umi-plugin-react": "^1.8.4"
+<% } -%>
+  },
+  "lint-staged": {
+  <% if (isTypeScript) { -%>
+    "*.{ts,tsx}": ["eslint --fix", "git add"],
+  <% } -%>
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
