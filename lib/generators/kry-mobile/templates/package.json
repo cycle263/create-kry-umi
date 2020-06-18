@@ -139,7 +139,7 @@
   },
   "dependencies": {
     "@sentry/browser": "^5.6.3",
-<% if (reactFeatures.includes('antd')) { -%>
+<% if (reactFeatures.includes('antd-mobile')) { -%>
     "antd-mobile": "^2.3.3",
 <% } -%>
 <% if (reactFeatures.includes('dva')) { -%>
