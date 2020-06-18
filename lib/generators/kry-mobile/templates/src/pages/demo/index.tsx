@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Card, Typography, Alert, Layout, Spin } from 'antd';
+import { Card, Alert, WhiteSpace } from 'antd-mobile';
 import { FormattedMessage } from 'umi-plugin-react/locale';
 
 export interface Loading {
@@ -24,8 +24,7 @@ const CodePreview: React.FC<{}> = ({ children }) => (
       margin: '12px 0',
     }}
   >
-    <code>
-      <Typography.Text copyable={true}>{children}</Typography.Text>
+    <code>{children}
     </code>
   </pre>
 );
@@ -34,8 +33,7 @@ class Demo extends Component {
   render() {
     const { loading }: any = this.props;
     return (
-      <Spin spinning={loading.effects['global/getDemo']}>
-        <Layout>
+        <WhiteSpace>
           <Card>
             <Alert
               message="umi ui 现已发布，欢迎使用 npm run ui 启动体验demo。"
@@ -47,16 +45,16 @@ class Demo extends Component {
                 marginBottom: 24,
               }}
             />
-            <Typography.Text strong={true}>
+            <div strong={true}>
               <a target="_blank" rel="noopener noreferrer" href="https://pro.ant.design/docs/block">
                 <FormattedMessage
                   id="app.welcome.link.block-list"
                   defaultMessage="基于 block 开发，快速构建标准页面的Demo"
                 />
               </a>
-            </Typography.Text>
+            </div>
             <CodePreview>npx umi block list</CodePreview>
-            <Typography.Text
+            <div
               strong={true}
               style={{
                 marginBottom: 12,
@@ -69,7 +67,7 @@ class Demo extends Component {
               >
                 <FormattedMessage id="app.welcome.link.fetch-blocks" defaultMessage="获取全部区块" />
               </a>
-            </Typography.Text>
+            </div>
             <CodePreview> npm run fetch:blocks</CodePreview>
           </Card>
           <p style={{ textAlign: 'center', marginTop: 24 }}>
@@ -79,8 +77,7 @@ class Demo extends Component {
             </a>
             。
           </p>
-        </Layout>
-      </Spin>
+        </WhiteSpace>
     );
   }
 };

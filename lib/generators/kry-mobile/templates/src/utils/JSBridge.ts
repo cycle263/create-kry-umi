@@ -1,9 +1,11 @@
+const kmobile = (window as any).kmobile;
+
 /**
  * 获取当前用户组织机构
  */
 const getOrgInfo = () => {
   const org =
-    window.kmobile && window.kmobile.getOrgInfo && window.kmobile.getOrgInfo();
+    kmobile && kmobile.getOrgInfo && kmobile.getOrgInfo();
   if (org) {
     try {
       if (typeof org === "object") {
@@ -32,7 +34,7 @@ const generateKey = function() {
  * 关闭页面
  */
 const closePage = () => {
-  window.kmobile.execAction('{"action":"closeWeb"}'); //关闭页面
+  kmobile.execAction('{"action":"closeWeb"}'); //关闭页面
 };
 
 /*
@@ -41,10 +43,10 @@ const closePage = () => {
 const closeApp = function() {
   try {
     getAppName()
-      ? window.kmobile && window.kmobile.closeApp && window.kmobile.closeApp()
-      : window.kmobile &&
-        window.kmobile.execAction &&
-        window.kmobile.execAction('{"action":"closeWeb"}');
+      ? kmobile && kmobile.closeApp && kmobile.closeApp()
+      : kmobile &&
+        kmobile.execAction &&
+        kmobile.execAction('{"action":"closeWeb"}');
   } catch (err) {
     console.log(`${err}`);
   }
@@ -64,9 +66,9 @@ const getOpenScan = (cb: Function) => {
         console.error(`${err}获取方法错误`);
       }
     };
-    window.kmobile &&
-      window.kmobile.openScan &&
-      window.kmobile.openScan(methodKey);
+    kmobile &&
+      kmobile.openScan &&
+      kmobile.openScan(methodKey);
   } catch (err) {
     console.warn(`getOpenScan获取当前的${err}`);
   }
@@ -77,7 +79,7 @@ const getOpenScan = (cb: Function) => {
 const getAppName = () => {
   try {
     return (
-      window.kmobile && window.kmobile.getAppName && window.kmobile.getAppName()
+      kmobile && kmobile.getAppName && kmobile.getAppName()
     );
   } catch (err) {
     console.warn(`getAppName获取当前的${err}`);
@@ -88,7 +90,7 @@ const getAppName = () => {
  */
 const closeScan = () => {
   try {
-    window.kmobile && window.kmobile.closeScan && window.kmobile.closeScan();
+    kmobile && kmobile.closeScan && kmobile.closeScan();
   } catch (err) {
     console.warn(`closeScan获取当前的${err}`);
   }
@@ -118,9 +120,9 @@ const getUserInfo = () => {
 const authentication = () => {
   console.log(">>>> get auth token");
   const info =
-    window.kmobile &&
-    window.kmobile.getVerifyingInfo &&
-    window.kmobile.getVerifyingInfo();
+    kmobile &&
+    kmobile.getVerifyingInfo &&
+    kmobile.getVerifyingInfo();
   if (info) {
     try {
       if (typeof info === "object") {

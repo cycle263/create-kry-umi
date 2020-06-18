@@ -30,7 +30,7 @@ const config: IConfig = {
   plugins: [
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
-      antd: <% if (reactFeatures.includes('antd-mobile')) { %>true<% } else { %>false<% } %>,
+      antd: <% if (reactFeatures.includes('antdMobile')) { %>true<% } else { %>false<% } %>,
       dva: <% if (reactFeatures.includes('dva')) { %>true<% } else { %>false<% } %>,
       dynamicImport: <% if (reactFeatures.includes('dynamicImport')) { %>{ webpackChunkName: true, level: 1 }<% } else { %>false<% } %>,
       title: '<%= name %>',

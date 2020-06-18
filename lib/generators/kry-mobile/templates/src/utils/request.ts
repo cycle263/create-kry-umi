@@ -15,17 +15,17 @@ export class ErResponseError extends Error {
   }
 }
 
-const authInfo = authentication();
-const orgInfo = getOrgInfo();
+const authInfo = authentication() || {};
+const orgInfo = getOrgInfo() || {};
 
 const kryHeaders = {
-  "KryToken": authInfo.krytoken,
-  "kry-api-brand-id": orgInfo["brandIdenty"],
-  "kry_version_code": authInfo["kry_version_code"],
-  "kry-api-timestamp": authInfo["kry_api_timestamp"],
-  "kry-api-sign": authInfo["kry_api_sign"],
-  "kry-api-shop-id": orgInfo["shopIdenty"],
-  "kry-api-device-id": orgInfo["terminalNo"],
+  "KryToken": authInfo.krytoken || '',
+  "kry-api-brand-id": orgInfo["brandIdenty"] || '',
+  "kry_version_code": authInfo["kry_version_code"] || '',
+  "kry-api-timestamp": authInfo["kry_api_timestamp"] || '',
+  "kry-api-sign": authInfo["kry_api_sign"] || '',
+  "kry-api-shop-id": orgInfo["shopIdenty"] || '',
+  "kry-api-device-id": orgInfo["terminalNo"] || '',
 };
 
 const HTTP_CODE_MESSAGE: any = {
