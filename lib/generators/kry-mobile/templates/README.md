@@ -145,7 +145,7 @@ export default {
 
     1、安装vscode的插件pont；
 
-    2、安装依赖包pont-engine；
+    2、确保已经安装package.json里的依赖包pont-engine；
 
     3、修改pont-config配置，或者pont start命令修改配置；
 
