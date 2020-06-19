@@ -31,13 +31,13 @@ const CodePreview: React.FC<{}> = ({ children }) => (
 
 class Demo extends Component {
   componentDidMount() {
-    <% if (reactFeatures.includes('pont')) { %>
+    <% if (reactFeatures.includes('pont')) { -%>
     // pont api 使用案例
     API.user.getUserByName.request({ username: 'test' }).then((res) => {
       // tslint:disable-next-line: no-console
       console.log('Pont mock response: >>>>>>>>>>', res);
     });
-    <% } %>
+    <% } -%>
   }
 
   render() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'umi/link';
 import styles from './index.css';
-<% if (reactFeatures.includes('locale')) { %>import { formatMessage } from 'umi-plugin-locale';<% } -%>
+<% if (reactFeatures.includes('locale')) { -%>import { formatMessage } from 'umi-plugin-locale';<% } -%>
 
 /* eslint-disable no-undef */
 export default function() {
@@ -11,10 +11,10 @@ export default function() {
       <ul className={styles.list}>
         <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
         <li>HOST_API: {`${__HOST_API__}`}</li>
-        <li>welcome Kry Mobile App!</li>
+        <li>Welcome Kry Mobile App!</li>
         <li>
           <Link to='/demo'>
-            <% if (reactFeatures.includes('locale')) { %>{formatMessage({ id: 'index.start' })}<% } else { %>Getting Started<% } %>
+            <% if (reactFeatures.includes('locale')) { -%>{formatMessage({ id: 'index.start' })}<% } else { -%>Getting Started<% } -%>
           </Link>
         </li>
       </ul>

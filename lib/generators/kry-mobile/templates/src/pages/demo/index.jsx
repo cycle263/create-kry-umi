@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Card, WingBlank, WhiteSpace } from 'antd';
+import { Card, WingBlank, WhiteSpace } from 'antd-mobile';
 import { FormattedMessage } from 'umi-plugin-react/locale';
 
 const CodePreview = ({ children }) => (
@@ -19,13 +19,13 @@ const CodePreview = ({ children }) => (
 
 class Demo extends Component {
   componentDidMount() {
-    <% if (reactFeatures.includes('pont')) { %>
+    <% if (reactFeatures.includes('pont')) { -%>
     // pont api 使用案例
-    API.user.getUserByName.request({ username: 'test' }).then((res) => {
+    window.API.user.getUserByName.request({ username: 'test' }).then((res) => {
       // tslint:disable-next-line: no-console
       console.log('Pont mock response: >>>>>>>>>>', res);
     });
-    <% } %>
+    <% } -%>
   }
 
   render() {
