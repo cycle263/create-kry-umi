@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'dva';
-import { Card, Alert, WhiteSpace } from 'antd-mobile';
+import { Card } from 'antd-mobile';
 import { FormattedMessage } from 'umi-plugin-react/locale';
 
 export interface Loading {
@@ -33,18 +33,9 @@ class Demo extends Component {
   render() {
     const { loading }: any = this.props;
     return (
-        <WhiteSpace>
+        <div>
           <Card>
-            <Alert
-              message="umi ui 现已发布，欢迎使用 npm run ui 启动体验demo。"
-              type="success"
-              showIcon={true}
-              banner={true}
-              style={{
-                margin: -12,
-                marginBottom: 24,
-              }}
-            />
+            <p>umi ui 现已发布，欢迎使用 npm run ui 启动体验demo。</p>
             <div strong={true}>
               <a target="_blank" rel="noopener noreferrer" href="https://pro.ant.design/docs/block">
                 <FormattedMessage
@@ -77,7 +68,7 @@ class Demo extends Component {
             </a>
             。
           </p>
-        </WhiteSpace>
+        </div>
     );
   }
 };

@@ -20,8 +20,8 @@ const getOrgInfo = () => {
   }
 };
 const generateKey = function() {
-  var code = 65;
-  var offset = 26;
+  const code = 65;
+  const offset = 26;
   return (
     "CB_" +
     "xxxxxxxxxxx".replace(/x/gi, function() {

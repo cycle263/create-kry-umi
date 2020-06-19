@@ -1,6 +1,20 @@
 {
-  "extends": "eslint-config-umi",
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint-config-umi",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:import/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "typescript", "react", "react-hooks", "import", "jsx-a11y", "jsdoc"],
   "rules": {
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "@typescript-eslint/no-angle-bracket-type-assertion": "off",
+    "@typescript-eslint/no-triple-slash-reference": 0,
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/no-object-literal-type-assertion": 0,
     "no-angle-bracket-type-assertion": false
   },
   "globals": {
