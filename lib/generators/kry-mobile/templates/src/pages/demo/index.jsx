@@ -24,7 +24,7 @@ class Demo extends Component {
         <div>
           <Card>
             <p>umi ui 现已发布，欢迎使用 npm run ui 启动体验demo。</p>
-            <div strong={true}>
+            <div>
               <a target="_blank" rel="noopener noreferrer" href="https://pro.ant.design/docs/block">
                 <FormattedMessage
                   id="app.welcome.link.block-list"
@@ -33,9 +33,7 @@ class Demo extends Component {
               </a>
             </div>
             <CodePreview>npx umi block list</CodePreview>
-            <div
-              strong={true}
-              style={{
+            <div style={{
                 marginBottom: 12,
               }}
             >
