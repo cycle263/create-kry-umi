@@ -16,8 +16,8 @@ const getOrgInfo = () => {
       console.error(error);
       return {};
     }
-    return {};
   }
+  return {};
 };
 const generateKey = function() {
   const code = 65;
